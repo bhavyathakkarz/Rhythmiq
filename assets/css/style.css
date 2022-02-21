@@ -1,0 +1,484 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+body{
+	background-color: #181818;
+	font-size: 16px;
+	min-width: 720px;
+}
+#playbardiv{
+	width: 100%;
+	background-color: #282828;
+	position: fixed;
+	bottom: 0;
+	min-width: 620px;
+}
+#playbar{
+	display: flex;
+	padding: 16px;
+	height: 90px;
+	box-sizing: border-box;
+}
+#playleft,#playright{
+	width: 30%;
+	min-width: 180px;
+}
+#playright{
+	position: relative;
+	margin-top: 16px;
+}
+#playcenter{
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 700px;
+}
+#playbar .content{
+	width: 100%;
+	height: 57px;
+}
+
+.playerControls .buttons{
+	margin: 0 auto;
+	display: table;
+}
+.controlbutton{
+	background-color: transparent;
+	border: none;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.controlbutton img{
+	width: 23px;
+	height: 23px;
+}
+
+.controlbutton.play img,
+.controlbutton.pause img{
+	width: 35px;
+	height: 35px;
+}
+.playbarcontainer{
+	display: flex;
+}
+.tym{
+	color: #a0a0a0;
+	font-size: 13px;
+	text-align: center;
+	min-width: 40px;
+}
+
+.progressbar{
+	width: 100%;
+	cursor: pointer;
+	height: 12px;
+	display: inline-flex;
+
+}
+
+.progressbarbg{
+	background-color: #404040;
+	width: 100%;
+	height: 4px;
+	border-radius: 2px;
+}
+*{
+	font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+.progress{
+	background-color: #a0a0a0;
+	height: 4px;
+	width: 0;
+	border-radius: 2px;
+}
+.playbarcontainer .progress{
+	background-color: #2ebd59;
+}
+
+.playbarcontainer .progressbar{
+	margin-top: 3px;
+}
+
+#playleft .albumartwork{
+	height: 100%;
+    max-width: 57px;
+    background-size: cover;
+    margin-right: 15px;
+    float: left;
+}
+.trackinfo{
+	display: table;
+}
+.trackinfo .track{
+	margin: 6px 0;
+	display: inline-block;
+	width: 100%;
+}
+
+.trackinfo .trackartist span{
+	font-size: 12px;
+	color: #a0a0a0;
+}
+.volumebar{
+	width: 180px;
+	position: absolute;
+	right: 0;
+}
+
+.volumebar .progressbar{
+	width: 125px;
+}
+
+#topcontainer{
+	width: 100%;
+	min-height: 100%;
+}
+#navbarcontainer{
+	width: 280px;
+	height: 100vh;
+	min-height: 100%;
+	background-color: #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.navbar{
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+}
+.logo{
+	margin-bottom: 15px;
+}
+.logo img{
+	width: 42px;
+}
+.navbar .group{
+	border-top: 1px solid #a0a0a0;
+	padding: 10px 0;
+}
+.navitem{
+	padding: 10px 0;
+	font-size: 16px;
+	font-weight: 700;
+	display: block;
+	letter-spacing: 1px;
+	position: relative;
+}
+.navitemlink{
+	color: #a0a0a0;
+	text-decoration: none;
+}
+.navitemlink:hover{
+	color: #fff;
+}
+.search{
+	position: absolute;
+	right: 0;
+	top: 4px;
+	width: 30px;
+}
+#mainview{
+	margin-left: 280px;
+	padding-bottom: 90px;
+	width: calc(100%-280px);
+}
+
+#maincontent{
+	padding: 0 20px;
+}
+.pageheading{
+	padding: 20px;
+	text-align: center;
+}
+.gridviewitem{
+	display: inline-block;
+	margin-right: 20px;
+	width: 30%;
+	max-width: 250px;
+	min-width: 200px;
+	margin-bottom: 20px;
+}
+.gridviewitem img{
+	width: 100%;
+}
+.gridviewinfo{
+	font-weight: 300;
+	padding: 5px 0;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.gridviewitem a{
+	text-decoration: none;
+}
+
+.topinfo{
+	width: 100%;
+	display: inline-block;
+	padding: 40px 0 10px 0;
+	
+}
+
+.topinfo #leftsection{
+	width: 30%;
+	float: left;
+	max-width: 250px;
+}
+.topinfo #leftsection img{
+	width: 100%;
+}
+
+.topinfo #rightsection{
+	width: 70%;
+	padding: 5px 10px 5px 40px;
+	float: left;
+	box-sizing: border-box;
+}
+
+.topinfo #rightsection h2{
+	margin-top: 0px;
+}
+
+.topinfo #rightsection p{
+	color: #989898;
+	font-weight: 300;
+}
+.songs{
+	padding: 0;
+}
+
+.tracklistrow{
+	height: 50px;
+	padding: 15px 10px;
+	list-style: none;
+}
+
+.tracklistrow span{
+	color: #989898;
+	font-weight: 300;
+}
+.tracklistrow:hover{
+	background-color: #282828;
+}
+.tracklistrow .trackcount{
+	width: 8%;
+	float: left;
+}
+
+.tracklistrow .trackcount img{
+	width: 25px;
+	position: absolute;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+.tracklistrow:hover .trackcount img{
+	visibility: visible;
+}
+
+.tracklistrow .trackcount span{
+	visibility: visible;
+}
+.tracklistrow:hover .trackcount span{
+	visibility: hidden;
+}
+
+.tracklistrow .trackinfo{
+	width: 75%;
+	float: left;
+}
+
+.tracklistrow .trackinfo span{
+	display: block;
+}
+
+.tracklistrow .trackinfo .album{
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.tracklistrow .trackmore{
+	width: 5%;
+	float: left;
+	text-align: right;
+}
+
+.tracklistrow .trackmore img{
+	width: 25px;
+	visibility: hidden;
+}
+.tracklistrow:hover .trackmore img{
+	visibility: visible;
+}
+
+.tracklistrow .trackduration{
+	width: 12%;
+	float: left;
+	text-align: right;
+}
+#artistinfo{
+	text-align: center;
+}
+.playbtn,.playlistbtn{
+	margin-bottom: 20px;
+	border: 2px solid #fff;
+	color: white;
+	background-color: transparent;
+	border-radius: 500px;
+	letter-spacing: 2px;
+	min-width: 130px;
+	cursor: pointer;
+	font-weight: 500;
+	padding: 15px;
+	background-color: #2ebd59;
+	border-color: #2ebd59;
+	
+}
+.borderbottom{
+	border-bottom: 1px solid #939393;
+	margin-bottom: 20px;
+}
+.songslist h1{
+	text-align: center;
+}
+
+[role="link"]{
+	cursor: pointer;
+}
+
+.searchcontainer{
+	background-color: #242424;
+	padding: 20px 28px;
+}
+
+.searchcontainer h2{
+	font-weight: 400;
+	margin: 0;
+}
+
+.searchcontainer input{
+	width: 100%;
+	background-color: transparent;
+	color: #fff;
+	font-size: 63px;
+	letter-spacing: 2px;
+	border: none;
+	font-weight: 700;
+}
+
+input:focus{
+	outline: none;
+}
+.searchresult{
+	padding: 15px 10px;
+}
+.searchresult:hover{
+	background-color: #282828;
+}
+.searchresult .artistname span{
+	color: #fff;
+}
+.noresult{
+	margin: 15px;
+	display: block;
+}
+.buttongroup button{
+	display: block;
+	margin: 0 auto 0 auto;
+}
+.playlistcontainer{
+	padding: 10px 0;
+
+}
+.playlistimg{
+	margin-top: 20px;
+	padding: 20px;
+	border: 3px solid #282828;
+}
+.deletebtn{
+	margin-bottom: 20px;
+	border: 2px solid #fff;
+	color: white;
+	background-color: transparent;
+	border-radius: 500px;
+	letter-spacing: 2px;
+	min-width: 130px;
+	cursor: pointer;
+	font-weight: 500;
+	padding: 15px;
+}
+
+.optionsMenu{
+	position: fixed;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.15);
+	background-color: #282828;
+	width: 200px;
+	z-index: 1000;
+	display: none;
+}
+
+.optionsMenu .item{
+	width: 100%;
+	box-sizing: border-box;
+	color: rgba(147,147,147,0.8);
+	cursor: pointer;
+	height: 40px;
+	font-weight: 400;
+	padding: 12px 20px;
+	font-size: 16px;
+	background-color: #282828;
+	min-height: 50px;
+}
+.optionsMenu .item:hover{
+	color: #fff;
+	background-color: #333;
+	border-color: #333;
+}
+
+.optionsMenu select{
+	-webkit-appearance: none;
+	border: none;
+	background-color: #fff;
+}
+
+.userDetails{
+	padding: 20px;
+}
+
+.userDetails .container h2{
+	text-align: center;
+}
+
+.userDetails .container input[type="text"],
+.userDetails .container input[type="password"],
+.userDetails .container .save{
+	display: block;
+	margin: 16px auto;
+}
+
+.userDetails .container input[type="text"],
+.userDetails .container input[type="password"]{
+	height: 50px;
+	width: 100%;
+	background-color: #1f1f1f;
+	border: none;
+	padding: 0 20px;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.userDetails .container .message{
+	color: #2ebd59;
+	font-size: 20px;
+	font-weight: 400;
+}
